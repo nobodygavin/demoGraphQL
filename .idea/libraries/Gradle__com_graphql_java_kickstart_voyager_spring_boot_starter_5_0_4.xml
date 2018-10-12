@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.graphql-java-kickstart:voyager-spring-boot-starter:5.0.4">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.graphql-java-kickstart/voyager-spring-boot-starter/5.0.4/62daf9369c8f818042f85a2923616aafb7a80313/voyager-spring-boot-starter-5.0.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.graphql-java-kickstart/voyager-spring-boot-starter/5.0.4/d9642a7883512559ceaf69cc9930328c453e0d48/voyager-spring-boot-starter-5.0.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
