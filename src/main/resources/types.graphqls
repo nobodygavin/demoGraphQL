@@ -23,3 +23,13 @@ type Review {
     id: Int!
     comment: String!
 }
+
+type Mutation {
+    addReview(input: AddReviewInput!): Review!
+    deleteReview(id: Int!): Int!
+}
+
+input AddReviewInput {
+    comment: String!
+    bookId: Int!
+}

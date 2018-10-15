@@ -17,6 +17,10 @@ query AllBooks {
       id
       name      
     }
+    reviews {
+      id
+      comment
+    }
   }
 }
 
@@ -54,3 +58,24 @@ query Author($authorId: Int!) {
   }
 }
 {"authorId": 1}
+
+
+mutation AddReview($input: AddReviewInput!) {
+  addReview(input: $input) {
+    id
+    comment
+  }
+}
+{
+  "input": {
+    "comment": "great!",
+    "bookId": 2
+  }
+}
+
+
+
+mutation DeleteReview($id: Int!) {
+  deleteReview(id: $id)
+}
+{"id": 11}
