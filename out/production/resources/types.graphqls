@@ -1,26 +1,25 @@
 type Query {
-    articles: [Article]
-    profiles: [Profile]
-    comments: [Comment]
-    article(id: Int!): Article
+    books: [Book]
+    authors: [Author]
+    reviews: [Review]
+    author(id: Int!): Author
 }
 
-type Article {
+type Book {
     id: Int!
-    title: String!
-    text: String!
-    author: Profile!
-    comments: [Comment]
+    name: String!
+    author: Author!
+    reviews: [Review]
 }
 
-type Profile {
+type Author {
     id: Int!
-    username: String!
-    bio: String
+    name: String!
+    bio: String!
+    books: [Book]
 }
 
-type Comment {
+type Review {
     id: Int!
-    text: String!
-    author: Profile!
+    comment: String!
 }
