@@ -15,7 +15,7 @@ type Book {
 type Author {
     id: Int!
     name: String!
-    bio: String!
+    biography: String!
     books: [Book]
 }
 

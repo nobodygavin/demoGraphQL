@@ -15,7 +15,7 @@ query AllBooks {
     name
     author {
       id
-      name
+      name      
     }
   }
 }
@@ -25,6 +25,7 @@ query AllAuthors {
   authors {
     id
     name
+    biography
     books {
       id
       name
