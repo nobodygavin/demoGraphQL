@@ -37,4 +37,8 @@ public class QueryResolver implements GraphQLQueryResolver {
   public Author getAuthor(final Long id) {
     return authorRepository.getOne(id);
   }
+
+  public Book getBook(final Long id) {
+    return bookRepository.getOne(id);
+  }
 }

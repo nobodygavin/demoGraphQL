@@ -47,6 +47,7 @@ query Author($authorId: Int!) {
   author(id: $authorId) {
     id
     name
+    biography
     books {
       id
       name
@@ -60,6 +61,24 @@ query Author($authorId: Int!) {
 {"authorId": 1}
 
 
+
+query Book($bookId: Int!) {
+  book(id: $bookId) {   
+    name
+    author {
+      name
+      biography
+    }
+    reviews {
+      id
+      comment
+    }
+  }
+}
+{"bookId": 2}
+
+
+
 mutation AddReview($input: AddReviewInput!) {
   addReview(input: $input) {
     id
@@ -68,7 +87,7 @@ mutation AddReview($input: AddReviewInput!) {
 }
 {
   "input": {
-    "comment": "great!",
+    "comment": "great! mutation test",
     "bookId": 2
   }
 }
