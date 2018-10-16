@@ -17,8 +17,8 @@ import lombok.AllArgsConstructor;
 @Component
 @AllArgsConstructor
 public class BookResolver implements GraphQLResolver<Book> {
-  private ReviewRepository reviewRepository;
-  private AuthorRepository authorRepository;
+  private final ReviewRepository reviewRepository;
+  private final AuthorRepository authorRepository;
 
   public Author getAuthor(final Book book) {
     return authorRepository.getOne(book.getAuthorId());

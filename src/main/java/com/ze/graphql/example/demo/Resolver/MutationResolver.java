@@ -14,15 +14,15 @@ import lombok.AllArgsConstructor;
 @Component
 @AllArgsConstructor
 public class MutationResolver implements GraphQLMutationResolver {
-  private ReviewRepository reviewRepository;
+  private final ReviewRepository reviewRepository;
 
   @Transactional
-  public Review addReview(AddReviewInput input) {
+  public Review addReview(final AddReviewInput input) {
     return reviewRepository.saveAndFlush(new Review(null, input.getComment(), input.getBookId()));
   }
 
   @Transactional
-  public Long deleteReview(Long id) {
+  public Long deleteReview(final Long id) {
     reviewRepository.deleteById(id);
     return id;
   }

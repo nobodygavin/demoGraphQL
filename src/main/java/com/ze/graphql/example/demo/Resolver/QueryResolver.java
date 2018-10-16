@@ -18,9 +18,9 @@ import lombok.AllArgsConstructor;
 @Component
 @AllArgsConstructor
 public class QueryResolver implements GraphQLQueryResolver {
-  private BookRepository bookRepository;
-  private ReviewRepository reviewRepository;
-  private AuthorRepository authorRepository;
+  private final BookRepository bookRepository;
+  private final ReviewRepository reviewRepository;
+  private final AuthorRepository authorRepository;
 
   public List<Book> getBooks() {
     return bookRepository.findAll();
