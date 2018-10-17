@@ -1,14 +1,14 @@
 buildscript {
-	ext {
-		springBootVersion = '2.0.5.RELEASE'
-	}
-	repositories {
+  ext {
+    springBootVersion = '2.0.5.RELEASE'
+  }
+  repositories {
     jcenter()
-		mavenCentral()
-	}
-	dependencies {
-		classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
-	}
+    mavenCentral()
+  }
+  dependencies {
+    classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+  }
 }
 
 apply plugin: 'java'
@@ -21,24 +21,24 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 1.8
 
 repositories {
-	mavenCentral()
+  mavenCentral()
 }
 
 
 dependencies {
-	implementation('org.springframework.boot:spring-boot-starter-data-jpa')
-	implementation('org.springframework.boot:spring-boot-starter-web')
-	implementation('org.springframework.boot:spring-boot-starter-tomcat')
+  implementation('org.springframework.boot:spring-boot-starter-data-jpa')
+  implementation('org.springframework.boot:spring-boot-starter-web')
+  implementation('org.springframework.boot:spring-boot-starter-tomcat')
   runtimeOnly('org.hsqldb:hsqldb')
   compileOnly('org.projectlombok:lombok')
 //	testImplementation('org.springframework.boot:spring-boot-starter-test')
 
-	compile 'com.graphql-java-kickstart:graphql-spring-boot-starter:5.0.4'
-	// to embed GraphiQL tool
-	compile 'com.graphql-java-kickstart:graphiql-spring-boot-starter:5.0.4'
-	// to embed Voyager tool
-	compile 'com.graphql-java-kickstart:voyager-spring-boot-starter:5.0.4'
+  compile 'com.graphql-java-kickstart:graphql-spring-boot-starter:5.0.4'
+  // to embed GraphiQL tool
+  compile 'com.graphql-java-kickstart:graphiql-spring-boot-starter:5.0.4'
+  // to embed Voyager tool
+  compile 'com.graphql-java-kickstart:voyager-spring-boot-starter:5.0.4'
 
-	compile 'com.graphql-java-kickstart:graphql-java-tools:5.3.3'
+  compile 'com.graphql-java-kickstart:graphql-java-tools:5.3.3'
 
 }

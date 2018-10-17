@@ -87,7 +87,7 @@ mutation AddReview($input: AddReviewInput!) {
 }
 {
   "input": {
-    "comment": "great! mutation test",
+    "comment": "Great Book! This is a mutation test",
     "bookId": 2
   }
 }
